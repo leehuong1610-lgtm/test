@@ -28,122 +28,23 @@
             }
         }
     </script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #E0F7FA 0%, #FBE4F8 100%);
-            background-attachment: fixed;
-            color: #1F2937; 
-            min-height: 100vh;
-            position: relative;
-            overflow-x: hidden;
-        }
-
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background-image: radial-gradient(#d3e3f0 1px, transparent 1px);
-            background-size: 20px 20px;
-            opacity: 0.3;
-            z-index: -1;
-        }
-        .vector-card {
-            background-color: #FFFFFF;
-            border: 1px solid #D1D5DB;
-            border-radius: 1.5rem;
-            box-shadow: var(--tw-shadow-vector);
-            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.5, 1);
-            position: relative;
-        }
-
-        .vector-card:hover {
-            transform: translate(-3px, -3px); 
-            box-shadow: var(--tw-shadow-vector-hover);
-        }
-   
-        #hero-search-bar {
-            box-shadow: var(--tw-shadow-vector);
-            transition: all 0.3s;
-        }
-        #hero-search-bar:hover {
-            box-shadow: var(--tw-shadow-vector-hover);
-            transform: translate(-3px, -3px);
-        }
-        
-        .header-clean {
-            background-color: #FFFFFF;
-            border-bottom: 3px solid #E0F7FA;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-        }
-        .gradient-text {
-            background-clip: text;
-            -webkit-background-clip: text;
-            color: transparent;
-            background-image: linear-gradient(45deg, #9333ea, #00B8D9);
-        }
-        .btn-gradient {
-            background-image: linear-gradient(90deg, #9333ea, #00B8D9);
-            color: white;
-            transition: all 0.3s;
-        }
-        .btn-gradient:hover {
-            background-image: linear-gradient(90deg, #00B8D9, #FF80B0);
-        }
-        .nav-link.active {
-            border-bottom: 3px solid #00B8D9; 
-            color: #00B8D9; 
-            font-weight: 700;
-        }
-        input[type="text"], input[type="email"], input[type="password"], select, textarea {
-            background-color: #FFFFFF !important;
-            border: 1px solid #D1D5DB !important;
-            color: #1F2937 !important; 
-        }
-        input:focus, select:focus, textarea:focus {
-             border-color: #9333ea !important;
-             box-shadow: 0 0 5px rgba(147, 51, 234, 0.5) !important;
-             outline: none !important;
-        }
-        .timeline {
-            border-left: 3px solid #D1D5DB;
-            padding-left: 2rem;
-            position: relative;
-        }
-        .timeline-item {
-            position: relative;
-            margin-bottom: 2.5rem;
-        }
-        .timeline-dot {
-            position: absolute;
-            left: -2.8rem;
-            top: 0;
-            width: 1.25rem;
-            height: 1.25rem;
-            border-radius: 50%;
-            background-color: #9333ea; 
-            border: 4px solid #FFFFFF;
-            box-shadow: 0 0 0 2px #9333ea;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body class="selection:bg-accent selection:text-white">
     <header class="header-clean sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-20">
-            <a href="#" class="text-3xl font-extrabold font-outfit gradient-text" onclick="navigateTo('home'); return false;">GroupUp</a>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between gap-2 items-center h-20">
+            <a href="#" class="text-3xl font-extrabold font-outfit gradient-text" onclick="navigateTo('home'); return false;"><img src="logo.svg" alt=""></a>
             <nav class="hidden md:flex space-x-6">
-                <a href="#" class="nav-link text-bg-dark-text hover:text-accent transition duration-200 p-2" data-page="home" onclick="navigateTo('home')">Trang Chủ</a>
-                <a href="#" class="nav-link text-bg-dark-text hover:text-accent transition duration-200 p-2" data-page="explore" onclick="navigateTo('explore')">Khám Phá</a>
-                <a href="#" class="nav-link text-bg-dark-text hover:text-accent transition duration-200 p-2" data-page="post" onclick="navigateTo('post')">Đăng Bài</a>
-                <a href="#" class="nav-link text-bg-dark-text hover:text-accent transition duration-200 p-2" data-page="rule" onclick="navigateTo('rule')">Quy Định</a>
-                <a href="#" class="nav-link text-bg-dark-text hover:text-accent transition duration-200 p-2" data-page="about" onclick="navigateTo('about')">Về Chúng Tôi</a>
+                <a href="#" class="nav-link text-bg-dark-text hover:text-accent transition duration-200 p-2" style="text-align: center;" data-page="home" onclick="navigateTo('home')">Trang Chủ</a>
+                <a href="#" class="nav-link text-bg-dark-text hover:text-accent transition duration-200 p-2" style="text-align: center;" data-page="explore" onclick="navigateTo('explore')">Khám Phá</a>
+                <a href="#" class="nav-link text-bg-dark-text hover:text-accent transition duration-200 p-2" style="text-align: center;" data-page="post" onclick="navigateTo('post')">Đăng Bài</a>
+                <a href="#" class="nav-link text-bg-dark-text hover:text-accent transition duration-200 p-2" style="text-align: center;" data-page="rule" onclick="navigateTo('rule')">Quy Định</a>
+                <a href="#" class="nav-link text-bg-dark-text hover:text-accent transition duration-200 p-2" style="text-align: center;" data-page="about" onclick="navigateTo('about')">Về Chúng Tôi</a>
             </nav>
 
             <div class="space-x-4 flex items-center">
-                <a href="#" class="text-bg-dark-text hover:text-callout transition duration-200 text-sm sm:text-base" onclick="navigateTo('signup')">Đăng Ký</a>
-                <a href="#" class="btn-gradient font-semibold py-2 px-4 rounded-lg transition duration-200 shadow-lg text-sm sm:text-base" onclick="navigateTo('signin')">Đăng Nhập</a>
+                <a href="#" class="text-bg-dark-text hover:text-callout transition duration-200 text-sm sm:text-base" style="text-align: center;" onclick="navigateTo('signup')">Đăng Ký</a>
+                <a href="#" class="btn-gradient font-semibold py-2 px-4 rounded-lg transition duration-200 shadow-lg text-sm sm:text-base" style="text-align: center;" onclick="navigateTo('signin')">Đăng Nhập</a>
             </div>
         
             <button id="mobile-menu-button" class="md:hidden text-primary focus:outline-none p-2 rounded-lg bg-bg-light hover:bg-white transition duration-200 border border-D1D5DB">
@@ -162,10 +63,16 @@
 
     <main class="w-full">
         <section id="home-view" class="page-view flex-col justify-start relative overflow-hidden">
-            <div class="w-full bg-white pt-20 pb-16">
-                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="w-full bg-white pt-20 pb-16 hrst">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center hrst-container">
+                    <img src="assets/icon-1.svg" alt="" class="hrst-container-icon-1">
+                    <img src="assets/icon-2.svg" alt="" class="hrst-container-icon-2">
+                    <img src="assets/icon-3.svg" alt="" class="hrst-container-icon-3">
+                    <img src="assets/icon-4.svg" alt="" class="hrst-container-icon-4">
+                    <img src="assets/icon-5.svg" alt="" class="hrst-container-icon-5">
+                    <img src="assets/icon-6.svg" alt="" class="hrst-container-icon-6">
                     
-                    <h1 class="text-5xl md:text-7xl lg:text-8xl font-extrabold mb-4 font-outfit gradient-text leading-none text-center max-w-4xl mx-auto">
+                    <h1 class="text-5xl md:text-7xl lg:text-8xl font-extrabold mb-4 font-outfit gradient-text leading-none text-center max-w-4xl mx-auto" >
                         Kết Nối, Học Tập, Phát Triển
                     </h1>
                     
@@ -230,7 +137,7 @@
         </section>
 
        
-        <section id="explore-view" class="page-view flex-col max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section id="explore-view" class="page-view flex-col max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 explore">
             <h2 class="text-4xl font-bold mb-8 font-outfit text-center gradient-text">Khám Phá Dự Án & Nhóm Học</h2>
 
             <div class="vector-card p-6 mb-8 rounded-xl shadow-vector">
@@ -300,8 +207,8 @@
             </div>
         </section>
         
-        <section id="post-view" class="page-view flex justify-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="w-full max-w-2xl vector-card p-8 rounded-xl shadow-vector">
+        <section id="post-view" class="page-view flex justify-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 post">
+            <div class=" max-w-2xl vector-card-post p-8 ">
                 <h2 class="text-3xl font-bold mb-6 font-outfit text-center gradient-text">Đăng Bài Mới</h2>
                 
                 <form id="post-form-full" class="space-y-5">
@@ -357,11 +264,12 @@
                     </p>
                 </form>
             </div>
+            <div class="post-container-img"><img src="assets/post-img.jpg" alt=""></div>
         </section>
 
 
-        <section id="rule-view" class="page-view flex justify-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="w-full max-w-3xl vector-card p-8 rounded-xl shadow-vector">
+        <section id="rule-view" class="page-view flex justify-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 rule">
+            <div class="w-full max-w-3xl vector-card-rule p-8 ">
                 <h2 class="text-4xl font-bold mb-6 font-outfit text-center gradient-text">Quy Định Cộng Đồng GroupUp</h2>
                 
                 <div class="space-y-6 text-gray-700">
@@ -392,9 +300,10 @@
                     </p>
                 </div>
             </div>
+            <div class="rule-img"><img src="assets/rule-img.svg" alt=""></div>
         </section>
 
-        <section id="signup-view" class="page-view flex justify-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section id="signup-view" class="page-view flex justify-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 signup">
             <div class="w-full max-w-md vector-card p-8 rounded-xl shadow-vector">
                 <h2 class="text-3xl font-bold mb-6 font-outfit text-center gradient-text">Đăng Ký Tài Khoản</h2>
                 
@@ -428,7 +337,7 @@
             </div>
         </section>
 
-        <section id="signin-view" class="page-view flex justify-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section id="signin-view" class="page-view flex justify-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 signin">
             <div class="w-full max-w-md vector-card p-8 rounded-xl shadow-vector">
                 <h2 class="text-3xl font-bold mb-6 font-outfit text-center gradient-text">Đăng Nhập</h2>
                 
@@ -454,7 +363,7 @@
             </div>
         </section>
 
-        <section id="about-view" class="page-view flex justify-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section id="about-view" class="page-view flex justify-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ab">
             <div class="w-full max-w-3xl vector-card p-8 rounded-xl shadow-vector">
                 <h2 class="text-4xl font-bold mb-8 font-outfit text-center gradient-text">Về GroupUp: Hành Trình và Tầm Nhìn</h2>
                 
@@ -505,299 +414,43 @@
 
     </main>
   
-    <footer class="bg-white py-6 mt-10 border-t border-gray-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-500 text-sm">
-            &copy; 2025 GroupUp. All rights reserved. | 
-            <a href="#" onclick="navigateTo('rule'); return false;" class="hover:text-primary transition duration-200">Quy Định</a> |
-            <a href="#" onclick="navigateTo('about'); return false;" class="hover:text-primary transition duration-200">Liên Hệ</a>
+    <div class="footer">
+        <div class="footer-container">
+            <div class="footer-container-content">
+                <img src="logo.svg" alt="" class="footer-container-content-logo">
+                <p class="footer-container-content">Chúc bạn tìm được người đồng hành cùng chí hướng trên chặng đường chạm đến đỉnh vinh quang - thứ mà bạn hằng mong muốn</p>
+            </div>
+            <div class="footer-container-menu-mobile">
+                <a href="" class="footer-container-menu-mobile-text footer-container-menu-mobile-text-select">Trang
+                    chủ</a>
+                <a href="" class="footer-container-menu-mobile-text footer-container-menu-mobile-text-none">Khám phá</a>
+                <a href="" class="footer-container-menu-mobile-text footer-container-menu-mobile-text-none">Liên hệ</a>
+            </div>
+            <div class="footer-container-menu">
+                <p class="footer-container-menu-home">Trang chủ</p>
+                <p  class="footer-container-menu-newfood">Khám phá</p>
+                <p class="footer-container-menu-toprate">Liên hệ</p>
+            </div>
+            <div class="footer-container-support">
+                <p class="footer-container-support-sp">Hỗ trợ</p>
+                <p class="footer-container-support-sparea">Trung tâm trợ giúp</p>
+                <p class="footer-container-support-report">Báo cáo</p>
+                <p class="footer-container-support-they">Về chúng tôi</p>
+            </div>
+            <div class="footer-container-contact">
+                <p class="footer-container-contact-text">Liên hệ</p>
+                <div class="footer-container-contact-container">
+                    <img src="assets/foot-icon-1.svg" alt="" class="footer-container-contact-container-icon">
+                    <img src="assets/foot-icon-2.svg" alt="" class="footer-container-contact-container-icon">
+                    <img src="assets/foot-icon-3.svg" alt="" class="footer-container-contact-container-icon">
+                    <img src="assets/foot-icon-4.svg" alt="" class="footer-container-contact-container-icon">
+                </div>
+            </div>
         </div>
-    </footer>
+    </div>
 
     
-    <script>
-
-        const MOCK_POSTS = [
-            { id: 1, title: "Tìm 2 Dev cho Dự Án Web E-commerce (Cần gấp)", author: "Minh Quân", type: "project", subject: "Lập trình Web", level: "intermediate", format: "online", isLive: true, skills: ["ReactJS", "NodeJS", "MongoDB"], summary: "Cần thành viên có kinh nghiệm làm việc với MERN stack để phát triển một dự án thương mại điện tử nhỏ. Liên hệ để trao đổi chi tiết!" },
-            { id: 2, title: "Nhóm ôn tập Giải tích 1", author: "Hồng Ngọc", type: "study", subject: "Toán học", level: "beginner", format: "offline", isLive: false, skills: ["Đại số", "Vi tích phân"], summary: "Ôn tập hàng tuần tại Thư viện trường Đại học Bách Khoa." },
-            { id: 3, title: "Dự án Thiết kế UI/UX cho App di động", author: "Thanh Bình", type: "project", subject: "Thiết kế", level: "intermediate", format: "online", isLive: true, skills: ["Figma", "Design Thinking"], summary: "Thiết kế giao diện cho một ứng dụng quản lý thời gian sáng tạo." },
-            { id: 4, title: "Cộng đồng luyện IELTS Speaking (Target 7.0+)", author: "Mạnh Hùng", type: "study", subject: "Ngoại ngữ", level: "advanced", format: "online", isLive: false, skills: ["Speaking", "Vocabulary"], summary: "Thực hành nói 3 buổi/tuần qua Zoom." },
-            { id: 5, title: "Tìm kế toán viên cho dự án Startup", author: "Thu Phương", type: "project", subject: "Kinh doanh", level: "beginner", format: "hybrid", isLive: true, skills: ["Kế toán cơ bản", "Excel"], summary: "Hỗ trợ quản lý sổ sách và tài chính ban đầu cho Startup công nghệ." },
-            { id: 6, title: "Nhóm học Machine Learning", author: "Đức Anh", type: "study", subject: "Khoa học Máy tính", level: "advanced", format: "online", isLive: false, skills: ["Python", "TensorFlow"], summary: "Đọc và thảo luận các paper mới về AI." },
-            { id: 7, title: "Tìm đồng đội làm game 2D", author: "Quốc Trung", type: "project", subject: "Lập trình Game", level: "intermediate", format: "online", isLive: true, skills: ["Unity", "C#"], summary: "Phát triển game platformer 2D đơn giản." },
-            { id: 8, title: "Ôn thi TOEIC cấp tốc", author: "Mai Linh", type: "study", subject: "Ngoại ngữ", level: "beginner", format: "offline", isLive: false, skills: ["Nghe", "Đọc"], summary: "Học tại quán cà phê gần trường Nhân Văn." },
-            { id: 9, title: "Dự án phân tích dữ liệu thị trường", author: "Văn Lâm", type: "project", subject: "Phân tích Dữ liệu", level: "advanced", format: "online", isLive: true, skills: ["R", "SQL", "Thống kê"], summary: "Phân tích xu hướng tiêu dùng trên mạng xã hội." },
-            { id: 10, title: "Nhóm Code LeetCode hàng ngày", author: "Thế Phương", type: "study", subject: "Lập trình", level: "intermediate", format: "online", isLive: true, skills: ["Algorithm", "Data Structure"], summary: "Giải quyết các bài toán thuật toán phỏng vấn." }
-        ];
-
-        let currentSearchTerm = '';
-
-        function navigateTo(pageId, searchTerm = '') {
-            const views = document.querySelectorAll('.page-view');
-            views.forEach(view => {
-                view.style.display = 'none';
-            });
-            
-            const targetView = document.getElementById(`${pageId}-view`);
-            if (targetView) {
-                targetView.style.display = 'flex';
-                // Cuộn lên đầu trang
-                window.scrollTo(0, 0);
-
-                // Xử lý logic cụ thể cho từng trang
-                if (pageId === 'explore') {
-                    // Cập nhật input tìm kiếm và áp dụng bộ lọc nếu có từ khóa
-                    if (searchTerm) {
-                        document.getElementById('quick-search-input').value = searchTerm;
-                        currentSearchTerm = searchTerm;
-                        applyFilters();
-                    } else {
-                         // Nếu không có searchTerm, chỉ hiển thị tất cả bài viết theo bộ lọc hiện tại
-                        applyFilters();
-                    }
-                }
-            } else {
-                console.error(`Không tìm thấy view cho ID: ${pageId}-view`);
-            }
-
-            // Cập nhật trạng thái active cho menu
-            updateActiveNav(pageId);
-            
-            // Ẩn mobile menu sau khi click
-            document.getElementById('mobile-menu').classList.add('hidden');
-        }
-
-        /**
-         * Cập nhật trạng thái active cho các liên kết menu
-         * @param {string} activePageId - ID của trang đang hoạt động
-         */
-        function updateActiveNav(activePageId) {
-            document.querySelectorAll('.nav-link').forEach(link => {
-                link.classList.remove('active', 'text-white', 'text-bg-dark-text');
-                // Đảm bảo màu chữ mặc định là màu tối trên nền sáng
-                link.classList.add('text-bg-dark-text');
-            });
-            
-            const activeLink = document.querySelector(`.nav-link[data-page="${activePageId}"]`);
-            if (activeLink) {
-                activeLink.classList.add('active');
-            }
-        }
-        
-        /**
-         * Xử lý đóng/mở Mobile Menu
-         */
-        document.getElementById('mobile-menu-button').addEventListener('click', function() {
-            const mobileMenu = document.getElementById('mobile-menu');
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // --- Chức năng Tìm Kiếm (Explore) ---
-
-        /**
-         * Áp dụng các bộ lọc và hiển thị kết quả
-         */
-        function applyFilters() {
-            const type = document.getElementById('filter-type').value;
-            const subject = document.getElementById('filter-subject').value.toLowerCase();
-            const level = document.getElementById('filter-level').value;
-            const format = document.getElementById('filter-format').value;
-            
-            // Sử dụng currentSearchTerm từ Home hoặc từ quick-search-input nếu đang ở Explore
-            const keyword = document.getElementById('quick-search-input').value.toLowerCase();
-            
-            const filteredPosts = MOCK_POSTS.filter(post => {
-                // Lọc theo Loại hình
-                if (type && post.type !== type) return false;
-                
-                // Lọc theo Môn học/Lĩnh vực
-                if (subject && !post.subject.toLowerCase().includes(subject) && !post.skills.some(s => s.toLowerCase().includes(subject))) return false;
-
-                // Lọc theo Cấp độ
-                if (level && post.level !== level) return false;
-
-                // Lọc theo Hình thức (Cập nhật dùng select thay vì checkbox)
-                if (format && post.format !== format) return false;
-
-                // Lọc theo Từ khóa chung (title, summary, skills)
-                if (keyword && 
-                    !post.title.toLowerCase().includes(keyword) && 
-                    !post.summary.toLowerCase().includes(keyword) && 
-                    !post.subject.toLowerCase().includes(keyword) &&
-                    !post.skills.some(s => s.toLowerCase().includes(keyword))
-                    ) return false;
-
-                return true;
-            });
-
-            renderResults(filteredPosts);
-        }
-
-        /**
-         * Đặt lại các bộ lọc về mặc định
-         */
-        function resetFilters() {
-            document.getElementById('filter-type').value = "";
-            document.getElementById('filter-subject').value = "";
-            document.getElementById('filter-level').value = "";
-            document.getElementById('filter-format').value = ""; // Đặt lại format
-            document.getElementById('quick-search-input').value = ""; // Đặt lại thanh tìm kiếm nhanh
-            applyFilters();
-        }
-        
-        /**
-         * Hàm helper để tạo SVG icon đơn giản
-         */
-        function getIcon(name, classes = "w-5 h-5") {
-            let path = '';
-            switch(name) {
-                case 'subject':
-                    // Book Open
-                    path = 'M12 2L6 5v14l6 3 6-3V5l-6-3zm0 2.8L16.2 7 12 9.2 7.8 7 12 4.8zm-2 15.2V9.8l-3.2 1.6V18l3.2 2zm4 0l-3.2-1.6V9.8l3.2 1.6V20z';
-                    break;
-                case 'format':
-                    // Globe/Map Pin
-                    path = 'M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm4.5-9H15v1.5h-3V11h-1.5v3H11v1.5h1.5v3H15v-3h1.5v-1.5H15V12h1.5v-.5z';
-                    break;
-                case 'level':
-                    // Trending Up (Level Up)
-                    path = 'M16 6l-3.1 3.1 2.5 3.5-6.1 4.3 2.5 3.5-3.8 3.8-1.7-1.7 3.8-3.8-2.5-3.5 6.1-4.3-2.5-3.5L16 6z';
-                    break;
-                default:
-                    path = '';
-            }
-            // Icon color is primary color
-            return `<svg class="${classes} text-primary" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="${path}"/></svg>`;
-        }
-
-        /**
-         * Render danh sách kết quả tìm kiếm (Không còn nút LIVE)
-         * @param {Array} posts - Mảng các bài đăng đã được lọc
-         */
-        function renderResults(posts) {
-            const resultsContainer = document.getElementById('search-results');
-            const summary = document.getElementById('search-results-summary');
-            
-            summary.textContent = `Tìm thấy ${posts.length} nhóm/dự án phù hợp với tiêu chí của bạn.`;
-            resultsContainer.innerHTML = '';
-            
-            if (posts.length === 0) {
-                resultsContainer.innerHTML = '<p class="text-xl text-center py-10 text-gray-500 col-span-full">Không tìm thấy kết quả nào. Hãy thử các từ khóa khác!</p>';
-                document.getElementById('load-more-btn').style.display = 'none';
-                return;
-            }
-
-            posts.forEach(post => {
-                const isProject = post.type === 'project';
-                // Badge: Nền sáng/Accent, Text tối
-                const badgeClass = isProject ? 'bg-accent text-white shadow-md' : 'bg-callout text-white shadow-md';
-                
-                // Nút CTA mới (Chỉ còn Xem Chi Tiết / Liên Hệ)
-                const ctaButton = `<button class="block w-full font-semibold py-2 px-4 rounded-lg transition duration-200 shadow-lg shadow-primary/30 btn-gradient flex items-center justify-center transform hover:scale-[1.01]">
-                                    Xem Chi Tiết / Liên Hệ
-                                </button>`;
-                
-                // Màu Level
-                const levelColor = post.level === 'advanced' ? 'text-callout font-bold' : post.level === 'intermediate' ? 'text-accent font-semibold' : 'text-primary';
-                const formatDisplay = post.format.charAt(0).toUpperCase() + post.format.slice(1);
-                
-                const postElement = `
-                    <div class="vector-card p-4 rounded-xl flex flex-col shadow-vector hover:shadow-vector-hover hover:border-accent">
-                        
-                        <!-- Header Thẻ (Avatar + Type) -->
-                        <div class="flex items-start justify-between mb-3 pb-3 border-b border-primary/20">
-                            <div class="flex items-start">
-                                <!-- Placeholder Avatar -->
-                                <div class="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center text-accent font-bold text-base mr-3 shadow-md flex-shrink-0">
-                                    ${post.subject.substring(0, 1)}
-                                </div>
-                                <div>
-                                    <h4 class="text-lg font-semibold text-primary font-outfit leading-snug">${post.title}</h4>
-                                    <p class="text-xs text-gray-500 italic mt-0.5">Người đăng: ${post.author}</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Nội dung & Metadata -->
-                        <div class="flex-grow">
-                            <p class="text-gray-600 mb-3 text-sm line-clamp-2">${post.summary}</p>
-                            
-                            <!-- Metadata Chi tiết hơn -->
-                            <div class="flex justify-between text-xs mb-3 pt-3 border-t border-gray-100">
-                                <div>
-                                    <div class="flex items-center space-x-1 text-primary mb-1">
-                                        ${getIcon('level', 'w-3 h-3')}
-                                        <span class="font-semibold">Trình Độ:</span>
-                                    </div>
-                                    <span class="ml-4 text-bg-dark-text ${levelColor} font-medium">${post.level.charAt(0).toUpperCase() + post.level.slice(1)}</span>
-                                </div>
-                                <div>
-                                    <div class="flex items-center space-x-1 text-primary mb-1 justify-end">
-                                        <span class="font-semibold">Hình Thức:</span>
-                                        ${getIcon('format', 'w-3 h-3')}
-                                    </div>
-                                    <span class="ml-4 text-bg-dark-text font-medium block text-right">${formatDisplay}</span>
-                                </div>
-                            </div>
-
-                            <!-- Skill Tags -->
-                            <div class="mt-2 flex flex-wrap gap-1">
-                                <span class="px-2 py-0.5 rounded text-xs font-bold ${badgeClass} inline-block">${isProject ? 'DỰ ÁN' : 'HỌC NHÓM'}</span>
-                                ${post.skills.slice(0, 2).map(skill => `<span class="px-2 py-0.5 bg-bg-light hover:bg-gray-200 rounded-full text-xs text-primary transition duration-200 border border-primary/20">${skill}</span>`).join('')}
-                                ${post.skills.length > 2 ? `<span class="px-2 py-0.5 text-xs text-gray-500"> +${post.skills.length - 2}</span>` : ''}
-                            </div>
-                        </div>
-
-                        <!-- Cột CTA -->
-                        <div class="mt-4">
-                            ${ctaButton}
-                        </div>
-                    </div>
-                `;
-                resultsContainer.insertAdjacentHTML('beforeend', postElement);
-            });
-            
-            // Ẩn nút "Xem Thêm" do đây là dữ liệu giả định
-            document.getElementById('load-more-btn').style.display = 'none';
-        }
-        
-        // --- Logic Pomodoro Timer & LIVE Room đã bị loại bỏ ---
-
-
-        // --- Logic Đăng Bài (Post) - Form chi tiết trên Post-View ---
-        document.getElementById('post-form-full').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Lấy dữ liệu từ form chi tiết
-            const title = document.getElementById('post-title-full').value;
-            const type = document.getElementById('post-type-full').value;
-            const description = document.getElementById('post-description-full').value;
-            const skills = document.getElementById('post-skills-full').value;
-            const location = document.getElementById('post-location-full').value;
-            const level = document.getElementById('post-level-full').value;
-
-            // Log dữ liệu bài đăng (Trong thực tế sẽ gửi lên server)
-            console.log("Bài đăng chi tiết mới:", { title, type, description, skills, location, level });
-
-            // Hiển thị thông báo thành công
-            const messageEl = document.getElementById('post-message-full');
-            messageEl.classList.remove('hidden');
-            
-            // Reset form
-            this.reset();
-            
-            // Tự động ẩn thông báo sau 5 giây
-            setTimeout(() => {
-                messageEl.classList.add('hidden');
-            }, 5000);
-        });
-
-
-        // --- Khởi tạo ứng dụng ---
-        document.addEventListener('DOMContentLoaded', () => {
-            // Hiển thị trang chủ ban đầu
-            navigateTo('home');
-        });
-    </script>
+    <script src="script.js"></script>
 
 </body>
 </html>
