@@ -252,7 +252,6 @@
     .footer-container-menu-home {
         font-weight: 500;
         font-size: 20px;
-        text-align: center;
         color: #00B8D9;
         text-decoration: none;
     }
@@ -260,7 +259,6 @@
     .footer-container-menu-newfood {
         font-weight: 400;
         font-size: 14px;
-        text-align: center;
         color: #000000;
         text-decoration: none;
     }
@@ -268,7 +266,6 @@
     .footer-container-menu-toprate {
         font-weight: 400;
         font-size: 14px;
-        text-align: center;
         color: #000000;
         text-decoration: none;
     }
