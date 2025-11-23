@@ -8,7 +8,7 @@ const MOCK_POSTS = [
     { id: 7, title: "Tìm đồng đội làm game 2D", author: "Quốc Trung", type: "project", subject: "Lập trình Game", level: "intermediate", format: "online", isLive: true, skills: ["Unity", "C#"], summary: "Phát triển game platformer 2D đơn giản." },
     { id: 8, title: "Ôn thi TOEIC cấp tốc", author: "Mai Linh", type: "study", subject: "Ngoại ngữ", level: "beginner", format: "offline", isLive: false, skills: ["Nghe", "Đọc"], summary: "Học tại quán cà phê gần trường Nhân Văn." },
     { id: 9, title: "Dự án phân tích dữ liệu thị trường", author: "Văn Lâm", type: "project", subject: "Phân tích Dữ liệu", level: "advanced", format: "online", isLive: true, skills: ["R", "SQL", "Thống kê"], summary: "Phân tích xu hướng tiêu dùng trên mạng xã hội." },
-    { id: 10, title: "Nhóm Code LeetCode hàng ngày", author: "Thế Phương", type: "study", subject: "Lập trình", level: "intermediate", format: "online", isLive: true, skills: ["Algorithm", "Data Structure"], summary: "Giải quyết các bài toán thuật toán phỏng vấn." }
+   
 ];
 
 let currentSearchTerm = '';
