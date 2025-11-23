@@ -1,7 +1,7 @@
-    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
     body {
-        font-family: 'Poppins', sans-serif;
+        font-family: 'Be Vietnam Pro', sans-serif;
         background: linear-gradient(135deg, #E0F7FA 0%, #FBE4F8 100%);
         background-attachment: fixed;
         color: #1F2937; 
@@ -43,7 +43,19 @@
         padding: 50px 0;
         width: 95%;
         max-width: 1248px;
-        
+        display: flex;
+        justify-content: center;
+    }
+    .post-container{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        border-radius: 1.5rem;
+        background-color: #FFFFFF;
+    }
+    .vector-card-post {
+        width: 100%;
+        max-width: 659px;
     }
     .post-container-img{
         width: 100%;
@@ -52,10 +64,12 @@
         object-fit: cover;
         object-position: center;
         height: 900px;
+        display: flex;
+        align-items: center;
     }
     .post-container-img img{
         width: 100%;
-        height: 100%;
+        height: auto;
         border-radius: 0 1.5rem 1.5rem 0;
     }
     .rule{
@@ -63,6 +77,13 @@
         height: fit-content;
         width: 95%;
         max-width: 1327px;
+    }
+    .rule-container{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        border-radius: 1.5rem;
+        background-color: #FFFFFF;
     }
     .vector-card-rule{
         background-color: #FFFFFF;
@@ -76,10 +97,12 @@
         background-color: #FFFFFF;
         border-radius: 0 1.5rem 1.5rem 0;
         overflow: hidden;
+        display: flex;
+        align-items: flex-end;
     }
     .rule-img img{
         width: 100%;
-        height: 100%;
+        height: auto;
         object-fit: cover;
         z-index: 10;
     }
@@ -343,6 +366,9 @@
     }
 
     @media(max-width:1024px){
+        header a{
+            font-size: 16px;
+        }
         .footer-container{
             max-width: 781px;
         }
@@ -371,11 +397,17 @@
             max-width: 110px;
             flex-wrap: wrap;
         }
+        .post-container{
+            width: fit-content;
+        }
         .post-container-img{
             display: none;
         }
         .vector-card-post {
             border-radius: 1.5rem;
+        }
+        .rule-container{
+            width: fit-content;
         }
         .rule-img{
             display: none;
@@ -394,5 +426,8 @@
             flex-wrap: wrap;
             justify-content: space-between;
             gap: 30px;
+        }
+        .signinup{
+            display: none;
         }
     }
