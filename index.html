@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GroupUp - Mạng Lưới Hợp Tác</title>
+    <title>Study with us</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -79,7 +79,7 @@
                     </p>
                     
                     <div id="hero-search-bar" class="w-full max-w-3xl mx-auto vector-card p-3 rounded-2xl flex items-center shadow-vector hover:shadow-vector-hover transform hover:translate-x-[-3px] hover:translate-y-[-3px] transition duration-300">
-                        <input type="text" id="quick-search-input" placeholder="Tìm kiếm theo môn học, kỹ năng, hoặc tên dự án..." 
+                        <input type="text" id="quick-search-input" style="border-radius: 10px;" placeholder="Tìm kiếm theo môn học, kỹ năng, hoặc tên dự án..." 
                                class="flex-grow bg-white text-bg-dark-text p-4 text-lg focus:outline-none placeholder-gray-400 border-none">
                         <button onclick="navigateTo('explore', document.getElementById('quick-search-input').value)" class="btn-gradient font-semibold p-4 rounded-xl transition duration-300 ml-2 shadow-lg hover:shadow-xl flex-shrink-0">
                             <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
@@ -180,7 +180,7 @@
                         </select>
                     </div>
 
-                    <button type="button" onclick="applyFilters()" class="col-span-2 md:col-span-1 btn-gradient font-bold py-2 rounded-lg transition duration-300 shadow-md h-full min-h-[42px]">
+                    <button type="button" onclick="applyFilters()" style="width: ;" class="col-span-2 md:col-span-1 btn-gradient font-bold py-2 rounded-lg transition duration-300 shadow-md h-full min-h-[42px]">
                         Lọc
                     </button>
                 </form>
