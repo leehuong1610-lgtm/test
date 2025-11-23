@@ -120,7 +120,6 @@
         background-color: #FFFFFF;
         border-bottom: 3px solid #E0F7FA;
         box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-        padding-top: 18px;
         box-sizing: border-box;
     }
     .gradient-text {
@@ -366,8 +365,11 @@
     }
 
     @media(max-width:1024px){
+        .nav-link {
+            font-size: 13px;
+        }
         header a{
-            font-size: 16px;
+            font-size: 13px;
         }
         .footer-container{
             max-width: 781px;
